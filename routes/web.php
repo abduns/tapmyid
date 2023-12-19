@@ -1,5 +1,8 @@
 <?php
 
+use App\Livewire\Pages\{
+    Index as PageIndex
+};
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +16,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', PageIndex::class)->name('pages');
